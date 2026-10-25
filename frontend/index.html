@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Scam Saathi — AI-powered multilingual scam detection. Paste a suspicious message and get a clear risk assessment and safety advice in your language." />
+  <meta name="keywords" content="scam detection, fraud alert, cybersecurity, India, Hindi, multilingual, OTP scam, phishing" />
+  <meta property="og:title" content="Scam Saathi — Pause. Check. Stay Safe." />
+  <meta property="og:description" content="AI-powered scam protection in your language. Free, private, and trusted." />
+  <title>Scam Saathi — Pause. Check. Stay Safe.</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Noto+Sans+Devanagari:wght@400;500;600;700&family=Noto+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="/static/style.css" />
+</head>
+<body>
+  <!-- HEADER -->
+  <header class="app-header" role="banner">
+    <div class="header-inner container">
+      <div class="logo-group">
+        <div class="logo-icon" aria-hidden="true">
+          <svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M18 3L4 9V18C4 25.7 10.2 32.9 18 35C25.8 32.9 32 25.7 32 18V9L18 3Z" fill="url(#shield-gradient)"/>
+            <path d="M12 18L16 22L24 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+            <defs>
+              <linearGradient id="shield-gradient" x1="4" y1="3" x2="32" y2="35" gradientUnits="userSpaceOnUse">
+                <stop stop-color="#1e40af"/>
+                <stop offset="1" stop-color="#0891b2"/>
+              </linearGradient>
+            </defs>
+          </svg>
+        </div>
+        <div class="logo-text">
+          <span class="brand-name">Scam Saathi</span>
+          <span class="brand-sub">AI Scam Protection</span>
+        </div>
+      </div>
+      <div class="header-right">
+        <div id="demo-badge" class="mode-badge demo-badge hidden">
+          <span class="badge-dot"></span>
+          Demo Mode
+        </div>
+        <div id="live-badge" class="mode-badge live-badge hidden">
+          <span class="badge-dot live"></span>
+          Live AI
+        </div>
+        <div class="privacy-indicator">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/>
+            <path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+          </svg>
+          Messages not saved
+        </div>
+        <div class="lang-selector-wrap">
+          <label for="output-language" class="lang-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+              <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+            </svg>
+            Explain in
+          </label>
+          <select id="output-language" aria-label="Select output language" class="lang-select">
+            <option value="en">English</option>
+            <option value="hi">हिन्दी</option>
+            <option value="bn">বাংলা</option>
+            <option value="ta">தமிழ்</option>
+            <option value="te">తెలుగు</option>
+            <option value="mr">मराठी</option>
+            <option value="gu">ગુજરાતી</option>
+            <option value="kn">ಕನ್ನಡ</option>
+            <option value="ml">മലയാളം</option>
+            <option value="pa">ਪੰਜਾਬੀ</option>
+          </select>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main id="main-content" role="main">
+    <!-- HERO -->
+    <section class="hero-section" aria-labelledby="hero-heading">
+      <div class="container">
+        <div class="hero-content">
+          <div class="tagline-chip">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+            </svg>
+            Pause. Check. Stay Safe.
+          </div>
+          <h1 id="hero-heading">Before you trust<br/>that message, <span class="heading-accent">check it.</span></h1>
+          <p class="hero-subtitle">
+            Paste a suspicious SMS or WhatsApp message. Get a clear risk assessment and safety advice in your language.
+          </p>
+          <p class="trust-statement">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+            This tool assists with risk assessment and does not guarantee message authenticity.
+          </p>
+        </div>
+        <div class="hero-stats">
+          <div class="stat-card">
+            <div class="stat-value">10+</div>
+            <div class="stat-label">Languages Supported</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">4</div>
+            <div class="stat-label">AI Agents Working</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-value">0</div>
+            <div class="stat-label">Messages Stored</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ANALYSIS CARD -->
+    <section class="analysis-section" aria-labelledby="analysis-heading">
+      <div class="container">
+        <div class="analysis-card" id="analysis-card">
+          <h2 id="analysis-heading" class="sr-only">Analyze a message</h2>
+
+          <!-- Sample message chips -->
+          <div class="chips-section">
+            <p class="chips-label">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+              </svg>
+              Try a sample:
+            </p>
+            <div class="chips-row" role="group" aria-label="Sample messages">
+              <button class="chip" data-sample="bank" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg>
+                Bank OTP Scam
+              </button>
+              <button class="chip" data-sample="parcel" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                Parcel Fee Scam
+              </button>
+              <button class="chip" data-sample="job" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+                Fake Job Offer
+              </button>
+              <button class="chip" data-sample="upi" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><line x1="12" y1="1" x2="12" y2="23"/><path d="M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+                UPI Request
+              </button>
+              <button class="chip" data-sample="ordinary" type="button">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Ordinary Message
+              </button>
+            </div>
+          </div>
+
+          <!-- Textarea -->
+          <div class="input-section">
+            <div class="textarea-wrapper">
+              <textarea
+                id="message-input"
+                rows="6"
+                maxlength="4000"
+                placeholder="Paste a suspicious SMS, WhatsApp, or email message here…&#10;&#10;Example: &quot;URGENT: Aapka bank account aaj block ho jayega. KYC update karo aur OTP share karein.&quot;"
+                aria-label="Suspicious message to analyze"
+                aria-describedby="char-counter input-error"
+                spellcheck="false"
+              ></textarea>
+              <button
+                id="clear-btn"
+                class="clear-btn hidden"
+                type="button"
+                aria-label="Clear message"
+              >
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                  <line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/>
+                </svg>
+              </button>
+            </div>
+            <div class="input-footer">
+              <span id="input-error" class="input-error" role="alert" aria-live="polite"></span>
+              <span id="char-counter" class="char-counter" aria-live="polite">0 / 4000</span>
+            </div>
+          </div>
+
+          <!-- Analyze button -->
+          <div class="analyze-row">
+            <button
+              id="analyze-btn"
+              class="analyze-btn"
+              type="button"
+              aria-label="Analyze this message for scam risks"
+            >
+              <span class="btn-icon" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                </svg>
+              </span>
+              <span class="btn-text">Analyze Message</span>
+              <span class="btn-spinner hidden" aria-hidden="true">
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" class="spin">
+                  <path d="M21 12a9 9 0 1 1-6.219-8.56"/>
+                </svg>
+              </span>
+            </button>
+          </div>
+        </div>
+
+        <!-- AGENT ACTIVITY PANEL -->
+        <div id="agent-panel" class="agent-panel hidden" aria-live="polite" aria-label="Agent processing status">
+          <div class="agent-panel-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <circle cx="12" cy="12" r="3"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14M4.93 4.93a10 10 0 0 0 0 14.14"/>
+            </svg>
+            Agent Pipeline Running
+          </div>
+          <div class="agents-list">
+            <div class="agent-step" id="agent-1" data-status="pending">
+              <div class="agent-step-icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+                </svg>
+              </div>
+              <div class="agent-step-content">
+                <div class="agent-step-title">Bhasha Agent</div>
+                <div class="agent-step-desc">Detecting language and extracting key phrases</div>
+              </div>
+              <div class="agent-step-status" aria-label="Status: pending"></div>
+            </div>
+            <div class="agent-step" id="agent-2" data-status="pending">
+              <div class="agent-step-icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+                  <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+                </svg>
+              </div>
+              <div class="agent-step-content">
+                <div class="agent-step-title">Risk Analyst</div>
+                <div class="agent-step-desc">Examining scam signals and patterns</div>
+              </div>
+              <div class="agent-step-status" aria-label="Status: pending"></div>
+            </div>
+            <div class="agent-step" id="agent-3" data-status="pending">
+              <div class="agent-step-icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+                </svg>
+              </div>
+              <div class="agent-step-content">
+                <div class="agent-step-title">Safety Advisor</div>
+                <div class="agent-step-desc">Preparing proportionate safety recommendations</div>
+              </div>
+              <div class="agent-step-status" aria-label="Status: pending"></div>
+            </div>
+            <div class="agent-step" id="agent-4" data-status="pending">
+              <div class="agent-step-icon" aria-hidden="true">
+                <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+                </svg>
+              </div>
+              <div class="agent-step-content">
+                <div class="agent-step-title">Bhasha Explainer</div>
+                <div class="agent-step-desc">Translating results to your selected language</div>
+              </div>
+              <div class="agent-step-status" aria-label="Status: pending"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- ERROR STATE -->
+        <div id="error-panel" class="error-panel hidden" role="alert" aria-live="assertive">
+          <div class="error-icon" aria-hidden="true">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+            </svg>
+          </div>
+          <div class="error-content">
+            <h3 class="error-title">Analysis Failed</h3>
+            <p id="error-message" class="error-message">Something went wrong. Please try again.</p>
+          </div>
+          <button id="retry-btn" class="retry-btn" type="button" aria-label="Retry analysis">
+            Try Again
+          </button>
+        </div>
+
+        <!-- RESULTS PANEL -->
+        <div id="results-panel" class="results-panel hidden" aria-live="polite">
+
+          <!-- Fallback warning -->
+          <div id="fallback-warning" class="fallback-warning hidden">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/>
+              <line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/>
+            </svg>
+            Live AI analysis failed. These results come from Demo Mode (rule-based analysis).
+          </div>
+
+          <!-- Risk header card -->
+          <div class="result-header-card" id="result-header">
+            <div class="result-meta">
+              <div class="result-badge-row">
+                <div class="risk-badge" id="risk-badge" role="status" aria-label="Risk level">
+                  <span class="risk-badge-icon" aria-hidden="true"></span>
+                  <span id="risk-label">—</span>
+                </div>
+                <div class="demo-tag" id="demo-tag" style="display:none;">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="3" width="20" height="14" rx="2" ry="2"/><line x1="8" y1="21" x2="16" y2="21"/><line x1="12" y1="17" x2="12" y2="21"/></svg>
+                  Demo Mode
+                </div>
+              </div>
+              <h2 id="result-heading" class="result-heading"></h2>
+              <p id="result-summary" class="result-summary"></p>
+            </div>
+            <div class="result-chips">
+              <div class="info-chip" id="chip-lang">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
+                <span id="detected-lang-text"></span>
+              </div>
+              <div class="info-chip" id="chip-category">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"/><line x1="7" y1="7" x2="7.01" y2="7"/></svg>
+                <span id="scam-category-text"></span>
+              </div>
+              <div class="info-chip" id="chip-confidence">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                <span id="confidence-text"></span> Confidence
+              </div>
+            </div>
+          </div>
+
+          <!-- Confidence explanation -->
+          <div class="confidence-card" id="confidence-card">
+            <div class="confidence-header">
+              <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              Assessment Confidence
+            </div>
+            <p id="confidence-explanation" class="confidence-explanation"></p>
+          </div>
+
+          <!-- Red flags -->
+          <div class="section-block" id="red-flags-section">
+            <h3 class="section-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/>
+              </svg>
+              Warning Signs Found
+            </h3>
+            <div id="red-flags-list" class="red-flags-list"></div>
+            <div id="no-flags-msg" class="no-flags-msg hidden">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><polyline points="20 6 9 17 4 12"/></svg>
+              No specific warning signs were identified in this message.
+            </div>
+          </div>
+
+          <!-- Recommended actions -->
+          <div class="section-block" id="actions-section">
+            <h3 class="section-title">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="9 11 12 14 22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/>
+              </svg>
+              Recommended Actions
+            </h3>
+            <ol id="actions-list" class="actions-list"></ol>
+          </div>
+
+          <!-- Recovery advice -->
+          <div class="section-block recovery-section hidden" id="recovery-section">
+            <div class="recovery-header">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+              </svg>
+              If You Have Already Responded
+            </div>
+            <p id="recovery-message" class="recovery-message"></p>
+            <ol id="recovery-steps" class="recovery-steps"></ol>
+          </div>
+
+          <!-- Limitations -->
+          <div class="limitations-card">
+            <div class="limitations-header">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
+              What This Analysis Cannot Determine
+            </div>
+            <p id="limitations-text" class="limitations-text"></p>
+          </div>
+
+          <!-- New analysis button -->
+          <div class="new-analysis-row">
+            <button id="new-analysis-btn" class="new-analysis-btn" type="button" aria-label="Analyze a new message">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                <polyline points="1 4 1 10 7 10"/><path d="M3.51 15a9 9 0 1 0 .49-3.51"/>
+              </svg>
+              Analyze Another Message
+            </button>
+          </div>
+
+        </div><!-- /results-panel -->
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="how-section" aria-labelledby="how-heading">
+      <div class="container">
+        <div class="section-header-centered">
+          <h2 id="how-heading" class="section-heading-lg">How Scam Saathi Works</h2>
+          <p class="section-subheading">Four AI agents work together to protect you.</p>
+        </div>
+        <div class="how-grid">
+          <div class="how-card">
+            <div class="how-card-number">01</div>
+            <div class="how-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/>
+                <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/>
+              </svg>
+            </div>
+            <h3 class="how-card-title">Bhasha Agent</h3>
+            <p class="how-card-desc">Detects the language of your message — Hindi, Hinglish, English, or other Indian languages — and preserves the original text for analysis.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-card-number">02</div>
+            <div class="how-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/>
+              </svg>
+            </div>
+            <h3 class="how-card-title">Risk Analyst</h3>
+            <p class="how-card-desc">Scans for impersonation, urgent threats, OTP requests, payment demands, and other strong scam indicators. Returns evidence-based findings only.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-card-number">03</div>
+            <div class="how-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/>
+              </svg>
+            </div>
+            <h3 class="how-card-title">Safety Advisor</h3>
+            <p class="how-card-desc">Recommends proportionate, practical steps based on the findings. Provides emergency recovery guidance if you've already responded to a scam.</p>
+          </div>
+          <div class="how-card">
+            <div class="how-card-number">04</div>
+            <div class="how-card-icon" aria-hidden="true">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/>
+              </svg>
+            </div>
+            <h3 class="how-card-title">Bhasha Explainer</h3>
+            <p class="how-card-desc">Presents all findings in your preferred language — from Hindi to Tamil to Bengali — using plain, accessible language without unnecessary jargon.</p>
+          </div>
+        </div>
+
+        <!-- Privacy Notice -->
+        <div class="privacy-card">
+          <div class="privacy-card-header">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+              <rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/>
+            </svg>
+            Privacy Notice
+          </div>
+          <ul class="privacy-list">
+            <li>Messages you paste are <strong>not stored</strong> on our servers by default.</li>
+            <li>When AI Mode is enabled, your message is sent to Google's Gemini API for analysis. Review <a href="https://policies.google.com/privacy" target="_blank" rel="noopener noreferrer">Google's Privacy Policy</a>.</li>
+            <li>In Demo Mode, all analysis is performed locally — no data leaves your browser or server.</li>
+            <li>We never request your OTP, UPI PIN, password, or financial credentials.</li>
+            <li>No login or registration is required.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="app-footer" role="contentinfo">
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-brand">
+          <div class="footer-logo">
+            <svg width="20" height="20" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M18 3L4 9V18C4 25.7 10.2 32.9 18 35C25.8 32.9 32 25.7 32 18V9L18 3Z" fill="url(#footer-shield)"/>
+              <path d="M12 18L16 22L24 14" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <defs>
+                <linearGradient id="footer-shield" x1="4" y1="3" x2="32" y2="35" gradientUnits="userSpaceOnUse">
+                  <stop stop-color="#1e40af"/>
+                  <stop offset="1" stop-color="#0891b2"/>
+                </linearGradient>
+              </defs>
+            </svg>
+            Scam Saathi
+          </div>
+          <p class="footer-tagline">AI-powered scam protection in your language.</p>
+        </div>
+        <div class="footer-links">
+          <p class="footer-disclaimer">
+            Scam Saathi provides risk assessment assistance only. It cannot verify sender identity or guarantee message authenticity.
+            For financial cyber fraud in India, call <strong>1930</strong> or visit
+            <a href="https://www.cybercrime.gov.in" target="_blank" rel="noopener noreferrer">cybercrime.gov.in</a>.
+          </p>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>Built with care for safer digital lives. &copy; 2024 Scam Saathi.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="/static/app.js"></script>
+</body>
+</html>
